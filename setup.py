@@ -11,7 +11,7 @@ def _read_long_description():
 
 setup(
     name='python-thumbnails',
-    version='0.5.1',
+    version='0.5.2',
     url='http://github.com/relekang/python-thumbnails',
     author='Rolf Erik Lekang',
     author_email='me@rolflekang.com',
@@ -20,8 +20,8 @@ setup(
     packages=find_packages(exclude='tests'),
     license='MIT',
     install_requires=[
-        'six==1.9.0',
-        'requests==2.6.0'
+        'six>=1.9.0',
+        'requests>=2.6.0'
     ],
     include_package_data=True,
     classifiers=[
