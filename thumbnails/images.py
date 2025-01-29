@@ -15,8 +15,9 @@ class Thumbnail(object):
     image = None
     _url = None
 
-    def __init__(self, name):
+    def __init__(self, name, extension='jpg'):
         self.name = '/'.join(name)
+        self._extension = extension
 
     @property
     def path(self):
@@ -31,7 +32,7 @@ class Thumbnail(object):
 
     @property
     def extension(self):
-        return 'jpg'
+        return self._extension
 
     @property
     def width(self):

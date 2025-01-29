@@ -47,7 +47,7 @@ def get_thumbnail(original, size, **options):
     if not force and cached:
         return cached
 
-    thumbnail = Thumbnail(thumbnail_name)
+    thumbnail = Thumbnail(thumbnail_name, options.get('format', 'jpg'))
     if force or not thumbnail.exists:
         options = engine.evaluate_options(options)
         size = engine.parse_size(size)
